@@ -10,4 +10,5 @@ app.get("/", (req, res) => {
   res.send("hi there uwu");
 });
 
-app.listen(8080);
+app.listen(process.env.PORT || 8080);
+console.log("uwu server running");
