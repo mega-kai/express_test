@@ -1,12 +1,11 @@
-import express from "express";
+const express = require("express");
+const favicon = require("serve-favicon");
+const path = require("path");
 
 const app = express();
 
-var favicon = require("serve-favicon");
+app.use(favicon(path.join(__dirname, "favicon.ico")));
 
-app.use(favicon(__dirname + "/favicon.ico"));
-
-// same with use but only deals with incoming get request of a certain path
 app.get("/", (req, res) => {
   res.send("hi there uwu");
 });
